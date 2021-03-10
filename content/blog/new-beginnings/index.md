@@ -2,7 +2,7 @@
 title: Second post
 date: "2015-05-01T22:12:03.284Z"
 description: "This is the pages second post"
-featuredImage: gatsby-icon.png
+thumbnailImage: image2.jpeg
 ---
 
 > A salted duck egg is a Chinese preserved food product made by soaking duck

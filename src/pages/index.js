@@ -1,9 +1,10 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import placeholderImage from "../images/placehold.jpg"
+
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -30,7 +31,7 @@ const BlogIndex = ({ data, location }) => {
       <ol className="articlesList">
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
-
+          console.log(post.frontmatter.testImage)
           return (
             <Link to={post.fields.slug} itemProp="url" className="articleLink">
               <li key={post.fields.slug} className="articles">
@@ -39,10 +40,9 @@ const BlogIndex = ({ data, location }) => {
                   itemScope
                   itemType="http://schema.org/Article"
                 >
-                  <img
-                    src={post.frontmatter.featuredImage}
-                    alt="placeholder"
-                    className="articleImage"
+                  <Img
+                    fluid={post.frontmatter.thumbnailImage.childImageSharp.fluid}
+
                   />
                   <header className="articleHeader">
                     <h2 className="articleH2">
@@ -91,6 +91,13 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          thumbnailImage {
+            childImageSharp {
+              fluid(maxWidth: 700) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       }
     }
