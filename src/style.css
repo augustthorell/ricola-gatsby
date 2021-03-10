@@ -17,6 +17,10 @@
   margin: 0;
   padding: 0;
 }
+a {
+  text-decoration: none;
+  color: #000;
+}
 
 .global-header a {
   color: #000;
@@ -30,8 +34,19 @@
   font-size: 2rem;
   font-weight: 600;
 }
+.logoContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
 .logo {
   width: 150px;
+}
+#backButton {
+  position: relative;
+  top: 30px;
+  left: 15px;
 }
 .buttonContainer {
   display: flex;
