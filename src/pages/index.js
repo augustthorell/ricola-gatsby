@@ -1,10 +1,10 @@
 import * as React from "react"
-import { Link, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { graphql } from "gatsby"
+
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
+import Articles from "../components/articles"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -28,46 +28,7 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
 
-      <ol className="articlesList">
-        {posts.map(post => {
-          const title = post.frontmatter.title || post.fields.slug
-          console.log(post.frontmatter.testImage)
-          return (
-            <Link to={post.fields.slug} itemProp="url" className="articleLink">
-              <li key={post.fields.slug} className="articles">
-                <article
-                  className="post-list-item"
-                  itemScope
-                  itemType="http://schema.org/Article"
-                >
-                  <Img
-                    fluid={post.frontmatter.thumbnailImage.childImageSharp.fluid}
-
-                  />
-                  <header className="articleHeader">
-                    <h2 className="articleH2">
-                      <span itemProp="headline">{title}</span>
-                    </h2>
-
-                    <small className="articleDate">
-                      {post.frontmatter.date}
-                    </small>
-                  </header>
-
-                  <section className="articleText">
-                    <p
-                      dangerouslySetInnerHTML={{
-                        __html: post.frontmatter.description || post.excerpt,
-                      }}
-                      itemProp="description"
-                    />
-                  </section>
-                </article>
-              </li>
-            </Link>
-          )
-        })}
-      </ol>
+      <Articles posts={posts} />
     </Layout>
   )
 }

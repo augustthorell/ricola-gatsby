@@ -14,8 +14,8 @@ const Layout = ({ location, title, children }) => {
     )
   } else {
     header = (
-      <Link className="global-header">
-        <Link to="/">{title}</Link>
+      <Link to="/">
+        <h1 className="global-header">{title}</h1>
       </Link>
     )
   }
