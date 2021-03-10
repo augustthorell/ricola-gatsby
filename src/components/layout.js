@@ -23,8 +23,8 @@ const Layout = ({ location, title, children }) => {
   }
 
   function backHistory() {
-    if (window.location.href === "Gatsby site") {
-      window.location.href = 'React site';
+    if (window.location.href === "http://localhost:8000/") {
+      window.location.href = 'http://localhost:3000/';
     } else {
       window.history.back()
     }
@@ -36,7 +36,7 @@ const Layout = ({ location, title, children }) => {
       <a onClick={backHistory} className="buttons" id="backButton">Back</a>
 
       <div className="logoContainer">
-        <a href="React site">
+        <a href="http://localhost:3000/">
           <StaticImage src="../images/ricola-logo.png" className="logo" alt="Ricola logo in dark green" />
         </a>
       </div>
