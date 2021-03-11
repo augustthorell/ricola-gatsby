@@ -44,8 +44,13 @@ const Layout = ({ location, title, children }) => {
       <header className="global-header">{header}</header>
 
       <div className="buttonContainer">
-        <button className="buttons">Into The Nature</button>
-        <button className="buttons">Sustainability Knowledge</button>
+
+        <Link to="/">
+          <button className="buttons">Into The Nature</button>
+        </Link>
+        <Link to="/sustainabilityKnowledge" >
+          <button className="buttons">Sustainability Knowledge</button>
+        </Link>
         <button className="buttons">Sustainability Lifestyle</button>
       </div>
 

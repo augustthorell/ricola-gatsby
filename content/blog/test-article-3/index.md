@@ -3,6 +3,7 @@ title: Jonna Jinton, the girl who lives in the “real north”
 date: "2020-12-17T22:12:03.284Z"
 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 author: Ying Li
+tag: nature
 thumbnailImage: jonna-jinton.jpg
 ---
 

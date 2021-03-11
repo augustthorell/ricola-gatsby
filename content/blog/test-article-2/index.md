@@ -3,6 +3,7 @@ title: How it’s really like to live in a tent by the swiss alps
 date: "2021-01-02T22:12:03.284Z"
 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 author: Mikael Svensson
+tag: nature
 thumbnailImage: mountains.jpg
 ---
 

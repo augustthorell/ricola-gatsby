@@ -7,31 +7,31 @@ import SEO from "../components/seo"
 import Articles from "../components/articles"
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMarkdownRemark.nodes
+    const siteTitle = data.site.siteMetadata?.title || `Title`
+    const posts = data.allMarkdownRemark.nodes
 
 
-  if (posts.length === 0) {
-    return (
-      <Layout location={location} title={siteTitle}>
-        <SEO title="All posts" />
+    if (posts.length === 0) {
+        return (
+            <Layout location={location} title={siteTitle}>
+                <SEO title="All posts" />
 
-        <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
+                <p>
+                    No blog posts found. Add markdown posts to "content/blog" (or the
+                    directory you specified for the "gatsby-source-filesystem" plugin in
+                    gatsby-config.js).
         </p>
-      </Layout>
+            </Layout>
+        )
+    }
+
+    return (
+        <Layout location={location} title={siteTitle} >
+            <SEO title="All posts" />
+
+            <Articles posts={posts} />
+        </Layout>
     )
-  }
-
-  return (
-    <Layout location={location} title={siteTitle} >
-      <SEO title="All posts" />
-
-      <Articles posts={posts} />
-    </Layout>
-  )
 }
 
 export default BlogIndex
@@ -44,7 +44,7 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      filter: {frontmatter: {tag: {in: "nature"}}}
+      filter: {frontmatter: {tag: {in: "sustainability"}}}
       sort: {fields: frontmatter___date, order: DESC}
     ) {
       nodes {

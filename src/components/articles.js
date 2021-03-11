@@ -3,6 +3,7 @@ import Img from "gatsby-image"
 import { Link } from "gatsby"
 
 const Articles = ({ posts }) => {
+
   return (
     <ol className="articlesList">
       {posts.map(post => {

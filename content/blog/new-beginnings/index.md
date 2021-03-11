@@ -3,6 +3,7 @@ title: What you didn’t know about the nature in Lebanon
 date: "2020-05-01T22:12:03.284Z"
 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 author: Hannah Lindqvist
+tag: nature
 thumbnailImage: nature.jpg
 ---
 
