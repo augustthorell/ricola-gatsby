@@ -17,6 +17,10 @@
   margin: 0;
   padding: 0;
 }
+.global-wrapper {
+  background-color: var(--main-bg);
+}
+
 a {
   text-decoration: none;
   color: #000;
