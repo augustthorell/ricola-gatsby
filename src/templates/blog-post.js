@@ -26,11 +26,14 @@ const BlogPostTemplate = ({ data, location }) => {
           <h1 itemProp="headline" className="postHeader">
             {post.frontmatter.title}{" "}
           </h1>
+          <br />
+          <p className="postDate">{post.frontmatter.author}</p>
           <p className="postDate">{post.frontmatter.date}</p>
         </header>
         <Img
           fluid={post.frontmatter.thumbnailImage.childImageSharp.fluid}
         />
+        <br />
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
@@ -64,9 +67,10 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        author
         thumbnailImage {
           childImageSharp {
-            fluid(maxWidth: 700) {
+            fluid(maxWidth: 900) {
               ...GatsbyImageSharpFluid
             }
           }

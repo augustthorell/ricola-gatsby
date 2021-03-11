@@ -2,6 +2,7 @@
 title: Hideaway in your nature home during pandemic
 date: "2019-12-01T22:12:03.284Z"
 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+author: Antony Lindström
 thumbnailImage: people.jpg
 ---
 

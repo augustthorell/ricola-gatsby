@@ -21,14 +21,14 @@ const Articles = ({ posts }) => {
                 itemScope
                 itemType="http://schema.org/Article"
               >
-                <Img
+                <Img className="articleImage"
                   fluid={post.frontmatter.thumbnailImage.childImageSharp.fluid}
                 />
                 <header className="articleHeader">
                   <h2 className="articleH2">
                     <span itemProp="headline">{title}</span>
                   </h2>
-
+                  <small className="articleDate">{post.frontmatter.author}</small><br />
                   <small className="articleDate">{post.frontmatter.date}</small>
                 </header>
 

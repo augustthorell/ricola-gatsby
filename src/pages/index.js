@@ -52,6 +52,7 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          author
           thumbnailImage {
             childImageSharp {
               fluid(maxWidth: 700) {

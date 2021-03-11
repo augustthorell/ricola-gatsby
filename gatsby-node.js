@@ -107,6 +107,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       description: String
       date: Date @dateformat
       featuredImage: File
+      author: String
     }
 
     type Fields {

@@ -2,6 +2,7 @@
 title: The relationship between nature and human
 date: "2021-02-27T22:12:03.284Z"
 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+author: Margareth Lindström
 thumbnailImage: hike.jpg
 ---
 
