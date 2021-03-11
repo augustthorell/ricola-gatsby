@@ -33,7 +33,7 @@ const Layout = ({ location, title, children }) => {
   return (
     <div className="global-wrapper" data-is-root-path={isRootPath}>
 
-      <a onClick={backHistory} className="buttons" id="backButton">Back</a>
+      <button onClick={backHistory} onKeyDown={backHistory} className="buttons" id="backButton">Back</button>
 
       <div className="logoContainer">
         <a href="http://localhost:3000/">
@@ -51,7 +51,9 @@ const Layout = ({ location, title, children }) => {
         <Link to="/sustainabilityKnowledge" >
           <button className="buttons">Sustainability Knowledge</button>
         </Link>
-        <button className="buttons">Sustainability Lifestyle</button>
+        <a href="http://localhost:8000/static/document-9e630fc612be6b6ab40f604c91d83498.pdf#toolbar=0">
+          <button className="buttons">Sustainability Lifestyle</button>
+        </a>
       </div>
 
       <main>{children}</main>
