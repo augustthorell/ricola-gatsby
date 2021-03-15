@@ -1,4 +1,5 @@
 module.exports = {
+  parhPrefix: "/ricola-gatsby";
   siteMetadata: {
     title: `Sustainability Magazine`,
     author: {

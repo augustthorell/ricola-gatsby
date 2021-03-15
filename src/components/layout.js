@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+import Pdf from "../pdf/document.pdf"
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -51,7 +52,7 @@ const Layout = ({ location, title, children }) => {
         <Link to="/sustainabilityKnowledge" >
           <button className="buttons">Sustainability Knowledge</button>
         </Link>
-        <a href="http://localhost:8000/static/document-9e630fc612be6b6ab40f604c91d83498.pdf#toolbar=0">
+        <a href={Pdf + "#toolbar=0"}>
           <button className="buttons">Sustainability Lifestyle</button>
         </a>
       </div>
