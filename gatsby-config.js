@@ -1,5 +1,5 @@
 module.exports = {
-  parhPrefix: "/ricola-gatsby",
+  pathPrefix: "/ricola-gatsby",
   siteMetadata: {
     title: `Sustainability Magazine`,
     author: {

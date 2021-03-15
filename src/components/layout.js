@@ -24,8 +24,8 @@ const Layout = ({ location, title, children }) => {
   }
 
   function backHistory() {
-    if (window.location.href === "http://localhost:8000/") {
-      window.location.href = 'http://localhost:3000/';
+    if (window.location.href === "https://augustthorell.github.io/ricola-gatsby/") {
+      window.location.href = 'https://augustthorell.github.io/Ricola/#/';
     } else {
       window.history.back()
     }
@@ -37,7 +37,7 @@ const Layout = ({ location, title, children }) => {
       <button onClick={backHistory} onKeyDown={backHistory} className="buttons" id="backButton">Back</button>
 
       <div className="logoContainer">
-        <a href="http://localhost:3000/">
+        <a href="https://augustthorell.github.io/Ricola/#/">
           <StaticImage src="../images/ricola-logo.png" className="logo" alt="Ricola logo in dark green" />
         </a>
       </div>
